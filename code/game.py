@@ -1,7 +1,8 @@
-import pygame
+from code.const import WIN_WIDTH, WIN_HEIGHT, MENU_OPTION
+from code.level import Level
 
-from code.const import WIN_WIDTH, WIN_HEIGHT
 from menu import Menu
+import pygame
 
 
 class Game:
@@ -10,14 +11,14 @@ class Game:
         self.window = pygame.display.set_mode((WIN_WIDTH, WIN_HEIGHT))
 
     def run(self):
-        menu = Menu(self.window)
-
         while True:
             menu = Menu(self.window)
-            menu.run()
-            pass
+            menu_return = menu.run()
 
-
-if __name__ == "__main__":
-    game = Game()
-    game.run()
+            if menu_return in [MENU_OPTION[0], MENU_OPTION[1], MENU_OPTION[2]]:
+                Level(self.window, 'Level1', menu_return)
+            elif menu_return == MENU_OPTION[4]:
+                pygame.quit()
+                quit()
+            else:
+                pass

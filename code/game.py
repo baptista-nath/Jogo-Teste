@@ -1,3 +1,5 @@
+import time
+
 from code.const import WIN_WIDTH, WIN_HEIGHT, MENU_OPTION
 from code.level import Level
 from menu import Menu
@@ -11,6 +13,7 @@ class Game:
 
     def run(self):
         while True:
+
             menu = Menu(self.window)
             menu_return = menu.run()
 

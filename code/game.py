@@ -1,4 +1,4 @@
-import time
+
 
 from code.const import WIN_WIDTH, WIN_HEIGHT, MENU_OPTION
 from code.level import Level
@@ -19,7 +19,7 @@ class Game:
 
             if menu_return in [MENU_OPTION[0], MENU_OPTION[1], MENU_OPTION[2]]:
                 level = Level(self.window, 'Level1', menu_return)
-                level.run()  # Certifique-se de que existe um método run() no Level
+                level.run()
             elif menu_return == MENU_OPTION[4]:
                 pygame.quit()
                 quit()

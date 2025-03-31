@@ -1,4 +1,4 @@
-
+import time
 
 from code.const import WIN_WIDTH, WIN_HEIGHT, MENU_OPTION
 from code.level import Level

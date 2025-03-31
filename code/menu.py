@@ -2,7 +2,7 @@ import pygame
 from pygame import Rect, Surface
 from pygame.font import Font
 
-from code.const import WIN_WIDTH, COLOR_ORANGE, MENU_OPTION, COLOR_WHITE, COLOR_YELLOW
+from code.const import WIN_WIDTH, C_ORANGE, MENU_OPTION, C_WHITE, C_YELLOW
 
 
 class Surfice:
@@ -23,18 +23,18 @@ class Menu:
         # DROW IMAGES
         while True:
             self.window.blit(source=self.surf, dest=self.rect)
-            self.menu_text(text_size=50, text="Moontain", text_color=COLOR_ORANGE,
+            self.menu_text(text_size=50, text="Moontain", text_color=C_ORANGE,
                            text_center_pos=((WIN_WIDTH / 2), 70))
-            self.menu_text(text_size=50, text="Shooter", text_color=COLOR_ORANGE,
+            self.menu_text(text_size=50, text="Shooter", text_color=C_ORANGE,
                            text_center_pos=((WIN_WIDTH / 2), 120))
         # check for all events
             for i in range(len(MENU_OPTION)):
                 if i == menu_option:
-                    self.menu_text(text_size=20, text=MENU_OPTION[i], text_color=COLOR_YELLOW,
+                    self.menu_text(text_size=20, text=MENU_OPTION[i], text_color=C_YELLOW,
                                    text_center_pos=((WIN_WIDTH / 2), 200 + 25 * i))
 
                 else:
-                    self.menu_text(text_size=20, text=MENU_OPTION[i], text_color=COLOR_WHITE,
+                    self.menu_text(text_size=20, text=MENU_OPTION[i], text_color=C_WHITE,
                                    text_center_pos=((WIN_WIDTH / 2), 200 + 25 * i))
             pygame.display.flip()
 
